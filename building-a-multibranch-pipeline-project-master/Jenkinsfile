@@ -1,15 +1,13 @@
 pipeline {
     agent { label 'builder' }
-
+     options {
+    lock("builder")
+   }
     stages {
-    
         stage('Build') {
-        
             steps {
-            sleep 60
-           bat 'echo "Hello world!"'
-           sleep 60
+                bat 'echo "Hello world!"'
             }
         }
-  }
-}   
+    }
+}
