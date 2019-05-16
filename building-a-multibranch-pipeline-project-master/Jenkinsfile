@@ -8,6 +8,7 @@ pipeline {
             steps {
             sleep 60
                 bat 'echo "Hello world!"'
+            sleep 60
             }
         }
     }
