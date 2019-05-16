@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'builder' }
      options {
-    lock (resources: ['test01', 'test02'])
+    lock (resource: ['test01', 'test02'])
    }
     stages {
         stage('Build') {
