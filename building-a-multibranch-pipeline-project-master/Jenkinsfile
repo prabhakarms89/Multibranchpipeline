@@ -6,12 +6,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            lock("builder") {
             sleep 60
                 sh 'echo "Hello world!"'
             sleep 60
-            }
-            }
+           }
         }
     }
 }
