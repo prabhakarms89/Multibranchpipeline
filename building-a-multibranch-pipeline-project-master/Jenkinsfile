@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+            sleep 60
                 bat 'echo "Hello world!"'
             }
         }
