@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                build 'blockerbuild'
+                build job: "blockerbuild", propagate: true, wait: true
                 bat 'echo "Hello world!"'
             }
         }
