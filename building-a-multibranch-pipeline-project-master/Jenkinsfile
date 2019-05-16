@@ -1,9 +1,7 @@
 pipeline {
     agent { label 'builder' }
-     options {
-    lock("blockerbuild/master")
-   }
     stages {
+    lock("blockerbuild/master")
         stage('Build') {
             steps {
             sleep 60
