@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'builder' }
      options {
-    lock("builder")
+    lock(label: 'jaffanode jaffanode2')
    }
     stages {
         stage('Build') {
