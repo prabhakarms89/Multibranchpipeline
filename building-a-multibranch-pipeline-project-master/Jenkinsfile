@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {
-    lock(label: 'blockerbuild')
+    lock(label: 'jaffa')
    }
     stages {
         stage('Build') {
