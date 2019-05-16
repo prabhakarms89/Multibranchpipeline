@@ -1,10 +1,9 @@
 pipeline {
     agent any
-    
-    stages {
     options {
-    lock(label: 'builder')
+     lock("${currentBuild.getRawBuild().getExecutor().getOwner().getDisplayName()}")
    }
+    stages {
         stage('Build') {
             steps {
             sleep 60
