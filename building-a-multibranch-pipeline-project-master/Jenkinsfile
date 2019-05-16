@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'builder master' }
+    agent { label 'builder' }
      options {
     lock(label: 'builder    ')
    }
