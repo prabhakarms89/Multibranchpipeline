@@ -1,11 +1,10 @@
 pipeline {
     agent { label 'builder' }
      options {
-    lock(label: 'jaffanode')
-    {
-    lock(label: 'jaffanode2')
+    lock(label: 'builder2')
+   
    }
-   }
+   
     stages {
         stage('Build') {
             steps {
