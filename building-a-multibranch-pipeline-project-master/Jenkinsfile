@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+    lock(label: 'builder')
+   }
     stages {
         stage('Build') {
             steps {
