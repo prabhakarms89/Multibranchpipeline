@@ -1,13 +1,14 @@
 pipeline {
     agent { label 'builder' }
     stages {
-    lock("blockerbuild/master")
+    lock("blockerbuild/master") {
         stage('Build') {
             steps {
             sleep 60
            bat 'echo "Hello world!"'
            sleep 60
             }
+        }
         }
     }
 }   
