@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'builder' }
      options {
-    lock(label: 'builder')
+    lock("127.0.0.1")
    }
     stages {
         stage('Build') {
