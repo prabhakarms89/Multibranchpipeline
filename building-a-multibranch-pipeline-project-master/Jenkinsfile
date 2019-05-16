@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            lock("127.0.0.1") {
+            lock("msater") {
             sleep 60
                 sh 'echo "Hello world!"'
             sleep 60
