@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    options {
-     lock("${currentBuild.getRawBuild().getExecutor().getOwner().getDisplayName()}")
+     options {
+    lock(label: 'builder')
    }
     stages {
         stage('Build') {
