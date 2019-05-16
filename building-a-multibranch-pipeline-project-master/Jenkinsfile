@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    properties([[$class: 'BuildBlockerProperty', blockLevel: 'GLOBAL' , blockingJobs: 'blockerbuild/.*', scanQueueFor: 'ALL' , useBuildBlocker: true]]) 
     stages {
         stage('Build') {
             steps {
+                build 'blockerbuild'
                 bat 'echo "Hello world!"'
             }
         }
