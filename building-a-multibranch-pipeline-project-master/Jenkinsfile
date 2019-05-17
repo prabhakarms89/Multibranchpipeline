@@ -4,9 +4,9 @@ pipeline {
      lock(label: 'node') 
    
    } */
-   
+   lock(label: 'node'){
     stages {
-    lock(label: 'node'){
+    
         stage('Build') {
             steps {
             sleep 60
