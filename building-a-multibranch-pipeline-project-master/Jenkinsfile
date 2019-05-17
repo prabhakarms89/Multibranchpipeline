@@ -1,9 +1,10 @@
 pipeline {
-    agent { label 'builder' }
-     options {
+    options {
      lock(label: 'node') 
    
    }
+    agent { label 'builder' }
+     
  //  lock(label: 'node'){
     stages {
     
