@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'builder' }
      options {
-     lock(label: 'builder2', quantity: 2) 
+     lock(label: 'builder1 builder2') 
    
    }
    
