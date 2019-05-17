@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'builder' }
      options {
-    lock (resources: ['jaffanode', 'jaffanode2']) 
+     lock(label: 'node') 
    
    }
    
