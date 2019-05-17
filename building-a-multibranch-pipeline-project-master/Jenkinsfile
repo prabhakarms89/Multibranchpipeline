@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'builder' }
      options {
-     lock(label: 'builder1 builder2') 
+     lock(label: 'nodes') 
    
    }
    
