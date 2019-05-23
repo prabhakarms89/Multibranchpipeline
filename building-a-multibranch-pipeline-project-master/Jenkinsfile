@@ -27,7 +27,8 @@ pipeline {
         """{
           "files": [
             {
-              "pattern": "**/package.json",
+              
+              "pattern": "**/chef_scripts_R32.zip",
               "target": "icrt-generic/${env.JOB_BASE_NAME}/",
               "explode": "true"
             }
