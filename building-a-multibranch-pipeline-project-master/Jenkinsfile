@@ -22,7 +22,7 @@ pipeline {
                 rtUpload (
                     buildName: 'MK',
                     buildNumber: '48',
-                    serverId: SERVER_ID,
+                    serverId: "SERVER_ID",
                     spec:
         """{
           "files": [
