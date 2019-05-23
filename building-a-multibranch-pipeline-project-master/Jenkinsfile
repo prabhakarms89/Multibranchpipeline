@@ -28,7 +28,7 @@ pipeline {
           "files": [
             {
               "pattern": "**/package.json",
-              "target": "icrt-generic"/env.JOB_BASE_NAME/
+              "target": "icrt-generic/"env.JOB_BASE_NAME"/"
             }
          ]
         }"""
