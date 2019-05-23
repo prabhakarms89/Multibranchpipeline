@@ -1,6 +1,6 @@
 pipeline {
     options {
-     lock(label: 'node') 
+ //    lock(label: 'node') 
    
    }
     agent { label 'builder' }
@@ -9,11 +9,32 @@ pipeline {
     stages {
     
         stage('Build') {
+     
             steps {
             sleep 60
                 sh 'echo "Hello world!"'
             sleep 60
            }
+           }
+           
+       stage ('Upload') {
+            steps {
+                rtUpload (
+                    buildName: 'MK',
+                    buildNumber: '48',
+                    serverId: SERVER_ID,
+                    spec:
+        """{
+          "files": [
+            {
+              "pattern": "package.json",
+              "target": "icrt-generic/"
+            }
+         ]
+        }"""
+                )
+            }
         }
+        
       }
 }
