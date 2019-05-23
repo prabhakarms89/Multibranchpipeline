@@ -11,9 +11,9 @@ pipeline {
         stage('Build') {
      
             steps {
-            sleep 60
+            sleep 6
                 sh 'echo "Hello world!"'
-            sleep 60
+            sleep 6
            }
            }
            
@@ -27,8 +27,8 @@ pipeline {
         """{
           "files": [
             {
-              "pattern": "package.json",
-              "target": "icrt-generic/"
+              "pattern": "**/package.json",
+              "target": "icrt-generic/test/"
             }
          ]
         }"""
