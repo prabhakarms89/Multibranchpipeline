@@ -3,7 +3,7 @@ pipeline {
  //    lock(label: 'node') 
    
    // }
-    agent { label 'builder' }
+    //agent { label 'builder' }
      
  //  lock(label: 'node'){
     stages {
